@@ -20,8 +20,8 @@ class ExtratorDeEstudante(BaseModel):
     estudante:str = Field("Nome do estudante informado, sempre em letras minúsculas.")
 
 class DadosDeEstudante(BaseTool):
-    name = "DadosDeEstudante"
-    description = """Esta ferramenta extrai o histórico e preferências de um estudante de acordo com seu histórico.
+    name:str = "DadosDeEstudante"
+    description:str = """Esta ferramenta extrai o histórico e preferências de um estudante de acordo com seu histórico.
 Passe para essa ferramenta como argumento o nome do estudante."""
 
     def _run(self, input: str) -> str:
@@ -57,8 +57,8 @@ class PerfilAcademicoDeEstudante(BaseModel):
     resumo:str = Field("Resumo das principais características desse estudante de forma a torná-lo único e um ótimo potencial estudante para faculdades. Exemplo: só este estudante tem bla bla bla")
         
 class PerfilAcademico(BaseTool):
-    name = "PerfilAcademico"
-    description = """Cria um perfil acadêmico de um estudante.
+    name:str = "PerfilAcademico"
+    description:str = """Cria um perfil acadêmico de um estudante.
 Esta ferramenta requer como entrada todos os dados do estudante.
 Eu sou incapaz de buscar os dados do estudante.
 Você tem que buscar os dados do estudante antes de me invocar."""

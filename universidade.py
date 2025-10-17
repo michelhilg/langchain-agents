@@ -28,8 +28,8 @@ class ExtratorDeUniversidade(BaseModel):
 
 
 class DadosDeUniversidade(BaseTool):
-    name = "DadosDeUniversidade"
-    description = """Esta ferramenta extrai os dados de uma universidade.
+    name:str = "DadosDeUniversidade"
+    description:str = """Esta ferramenta extrai os dados de uma universidade.
 Passe para essa ferramenta como argumento o nome da universidade."""
 
     def _run(self, input:str) -> str:
@@ -53,8 +53,8 @@ Entrada:
         return json.dumps(dados)
 
 class TodasUniversidades(BaseTool):
-    name="TodasUniversidades"
-    description="""Carrega os dados de todas as universidades. Não é necessário nenhum parâmetro de entrada."""
+    name:str="TodasUniversidades"
+    description:str="""Carrega os dados de todas as universidades. Não é necessário nenhum parâmetro de entrada."""
     
     def _run(self, input:str):
         universidades = busca_dados_das_universidades()
